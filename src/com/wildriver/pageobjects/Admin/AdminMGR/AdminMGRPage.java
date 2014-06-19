@@ -44,7 +44,7 @@ public class AdminMGRPage extends SuperTestNG
 	}
 	public static WebElement chkbx_StockManager()
 	{
-		WebElement Element = driver.findElement(By.id("AdminUserRoleStockManager/oManager"));
+		WebElement Element = driver.findElement(By.id("AdminUserRoleStockManager"));
 		return Element;
 	}
 	public static WebElement chkbx_AdminRights()

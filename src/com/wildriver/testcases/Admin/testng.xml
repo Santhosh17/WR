@@ -6,6 +6,7 @@
       <class name="com.wildriver.testcases.Admin.AdminMGR.AddUser"/>
       <class name="com.wildriver.testcases.Admin.AdminMGR.DeleteUser"/>
       <class name="com.wildriver.testcases.Admin.PurchaseOrderMGR.SupplierMGR.SupplierDetails.AddSupplier"/>
+      <class name="com.wildriver.testcases.Admin.DealerMGR.DealerDetails.AddDealer"/>
       <class name="com.wildriver.testcases.Admin.StockMGR.ProductEditor.AddProduct"/>
     </classes>
   </test> <!-- Test -->

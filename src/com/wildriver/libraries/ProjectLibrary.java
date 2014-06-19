@@ -246,7 +246,7 @@ public class ProjectLibrary extends SuperTestNG
 		String Content = TxtBoxWebElement.getAttribute("value");
 		String ExcelData = Generic.getXlCellValue(xlpath, sheetName, rownum, cellnum);
 		Assert.assertEquals(Content,ExcelData);
-		Reporter.log(LocationName+" Data Verification -- PASS",true);
+		Reporter.log(LocationName+" :: "+ExcelData+" = "+Content+" :: Data Verification -- PASS",true);
 	}
 	public static void CompareStringTextBoxByID(String xlpath,String sheetName,int rownum,int cellnum,String LocationName,String WebelementID)
 	{
@@ -370,6 +370,4 @@ public class ProjectLibrary extends SuperTestNG
 		Assert.assertEquals(PageTitle, ExpectedPageTitle);
 		Reporter.log(PageTitle+"- Page Title VERIFICATION --- PASS ",true);
 	}
-	
 }
-

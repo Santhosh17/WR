@@ -69,7 +69,7 @@ public class AddProduct extends SuperTestNG
 		
 		String ProductCredential = Generic.getXlCellValue(xlpath, sheetName, 5, 1);
 		ProjectLibrary.ClickOnLink("Product Name", StockMGRPage.lnk_ProductName(ProductCredential));
-		Reporter.log("----------Stock Details----------",true);
+		Reporter.log("----------Stock Details Verificaton ----------",true);
 		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 2, 1, "Category", ProductEditorPage.txtbx_Category());
 		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 3, 1, "Product Group", ProductEditorPage.txtbx_ProductGroup());
 		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 4, 1, "Stock Code", ProductEditorPage.txtbx_StockCode());
@@ -78,15 +78,15 @@ public class AddProduct extends SuperTestNG
 		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 7, 1, "Grade", ProductEditorPage.txtbx_Grade());
 		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 8, 1, "Fill", ProductEditorPage.txtbx_Fill());
 		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 9, 1, "Pack Weight", ProductEditorPage.txtbx_PackWeight());
-		Reporter.log("----------Stock Controls----------",true);
+		Reporter.log("----------Stock Controls Verificaton ----------",true);
 		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 2, 3, "Minimum Stock Level", ProductEditorPage.txtbx_MinimumStockLevel());
 		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 3, 3, "Quantity Per pallet", ProductEditorPage.txtbx_QuantityPerPallet());
 		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 4, 3, "Unit Of Measure", ProductEditorPage.txtbx_UnitOfMeasure());
 		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 5, 3, "Order Window", ProductEditorPage.txtbx_OrderWindow());
-		Reporter.log("----------Current Status----------",true);
+		Reporter.log("----------Current Status Verificaton----------",true);
 		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 8, 3, "Stock Adjustment - New Stock level", ProductEditorPage.txtbx_StockAdjustmentNewStockLevel());
-		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 9, 3, "Adjustment Reason", ProductEditorPage.txtbx_AdjustmentReason());
-		Reporter.log("----------Supplier Details----------",true);
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 9, 3, "Adjustment Reason", ProductEditorPage.txtbx_AdjustmentReason());
+		Reporter.log("----------Supplier Details Verificaton ----------",true);
 		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 2, 5, "Supplier Name", ProductEditorPage.txtbx_SupplierName());
 		ProjectLibrary.CompareStringTextBox(Supplier, AddSupplier, 1, 1, "Supplier Code", ProductEditorPage.txtbx_SupplierCode());
 		ProjectLibrary.CompareStringTextBox(Supplier, AddSupplier, 3, 1, "Supplier Address", ProductEditorPage.txtbx_SupplierAddress());
