@@ -54,6 +54,5 @@ public class AddUser extends SuperTestNG
 		ProjectLibrary.ClickOnLink("User Name", AdminMGRPage.lnk_User(UserName));
 		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 1, 1, "Name", AdminMGRPage.txtbx_Name());
 		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 2, 1, "Email", AdminMGRPage.txtbx_EmailAddress());
-		
 	}
 }
