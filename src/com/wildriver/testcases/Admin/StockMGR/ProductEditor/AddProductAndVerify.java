@@ -13,9 +13,9 @@ import com.wildriver.pageobjects.Admin.StockMGR.StockMGRPage;
 import com.wildriver.pageobjects.Admin.StockMGR.ProductEditor.ProductEditorPage;
 import com.wildriver.testcases.Admin.LoginPage.AdminLogin;
 
-public class AddProduct extends SuperTestNG
+public class AddProductAndVerify extends SuperTestNG
 {
-	@Test(groups="Admin")
+	@Test(groups="Admin", priority = 0)
 	public static void WR_AddProduct()
 	{
 		try
@@ -64,6 +64,12 @@ public class AddProduct extends SuperTestNG
 		ProjectLibrary.CompareStringTextBox(Supplier, AddSupplier, 6, 1, "Your Supplier Notes", ProductEditorPage.txtbx_SupplierNotes());
 		ProjectLibrary.ClickOnButton("Add Product", ProductEditorPage.btn_AddProduct());
 		ProjectLibrary.SuccessMsgVerify("PRODUCT DETAILS ADDED SUCCESSFULLY.", StockMGRPage.txt_ValidationMsg());
+	}
+	@Test(groups="Admin", priority = 1)
+	public static void WR_VerifyAddedProduct()
+	{
+		String xlpath = "./src/com/wildriver/testdata/Admin/StockMGR/ProductEditor/Products.xls";
+		String sheetName = "Add Product";
 		
 		Reporter.log("**********Data Verifiction**********",true);
 		
@@ -87,11 +93,14 @@ public class AddProduct extends SuperTestNG
 		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 8, 3, "Stock Adjustment - New Stock level", ProductEditorPage.txtbx_StockAdjustmentNewStockLevel());
 //		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 9, 3, "Adjustment Reason", ProductEditorPage.txtbx_AdjustmentReason());
 		Reporter.log("----------Supplier Details Verificaton ----------",true);
+		String SupplierName = Generic.getXlCellValue(xlpath, sheetName, 2, 5);
+		String Supplier = "./src/com/wildriver/testdata/Admin/PurchaseOrderMGR/SupplierMGR/SupplierDetails/Supplier.xls";
+		String AddSupplier = SupplierName;
 		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 2, 5, "Supplier Name", ProductEditorPage.txtbx_SupplierName());
 		ProjectLibrary.CompareStringTextBox(Supplier, AddSupplier, 1, 1, "Supplier Code", ProductEditorPage.txtbx_SupplierCode());
 		ProjectLibrary.CompareStringTextBox(Supplier, AddSupplier, 3, 1, "Supplier Address", ProductEditorPage.txtbx_SupplierAddress());
 		ProjectLibrary.CompareStringTextBox(Supplier, AddSupplier, 4, 1, "Email Address", ProductEditorPage.txtbx_SupplierEmail());
 		ProjectLibrary.CompareStringTextBox(Supplier, AddSupplier, 5, 1, "Phone Number", ProductEditorPage.txtbx_SupplierPhoneNumber());
 		ProjectLibrary.CompareStringTextBox(Supplier, AddSupplier, 6, 1, "Your Supplier Notes", ProductEditorPage.txtbx_SupplierNotes());
-	}
+	}	
 }

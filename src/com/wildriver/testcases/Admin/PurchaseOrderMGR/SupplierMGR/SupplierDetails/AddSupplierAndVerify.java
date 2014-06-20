@@ -13,9 +13,9 @@ import com.wildriver.pageobjects.Admin.PurchaseOrderMGR.SupplierMGR.SupplierMGRP
 import com.wildriver.pageobjects.Admin.PurchaseOrderMGR.SupplierMGR.SupplierDetails.SupplierDetailsPage;
 import com.wildriver.testcases.Admin.LoginPage.AdminLogin;
 
-public class AddSupplier extends SuperTestNG
+public class AddSupplierAndVerify extends SuperTestNG
 {
-	@Test(groups="Admin")
+	@Test(groups="Admin", priority = 0)
 	public static void WR_AddSupplier()
 	{
 		try
@@ -41,6 +41,24 @@ public class AddSupplier extends SuperTestNG
 		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 6, 1, "Your Supplier Notes", SupplierDetailsPage.txtbx_YourSupplierNotes());
 		ProjectLibrary.ClickOnButton("Add Supplier", SupplierDetailsPage.btn_AddSupplier());
 		ProjectLibrary.SuccessMsgVerify("SUPPLIER HAS BEEN SAVED.", SupplierMGRPage.txt_ValidationMSG());
+	}
+	@Test(groups="Admin", priority = 1)
+	public static void WR_VerifyAddedSupplier()
+	{
+		try
+		{
+			Generic.ImplicitWait(1);
+			AdminLogin.WR_AdminLogin();
+		}
+		catch (NoSuchElementException e)
+		{
+			Reporter.log("Already Logged in So Continuing with Testing Process",true);
+			Generic.ImplicitWait(10);
+		}
+		ProjectLibrary.ClickOnButton("P/O MGR", AdminGeneralElements.btn_POMGR());
+		ProjectLibrary.ClickOnButton("Manage Suppliers", PurchaseOrderMGRPage.btn_ManageSuppliers());
+		String xlpath ="./src/com/wildriver/testdata/Admin/PurchaseOrderMGR/SupplierMGR/SupplierDetails/Supplier.xls";
+		String sheetName ="Jack timbers";
 		String SupplierName = Generic.getXlCellValue(xlpath, sheetName, 2, 1);
 		ProjectLibrary.ClickOnLink("Supplier Name", SupplierMGRPage.lnk_SupplierName(SupplierName));
 		Reporter.log("**********Data Verifiction**********",true);

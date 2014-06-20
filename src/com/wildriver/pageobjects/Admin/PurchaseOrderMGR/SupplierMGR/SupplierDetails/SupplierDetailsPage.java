@@ -42,4 +42,9 @@ public class SupplierDetailsPage extends SuperTestNG
 		WebElement Element = driver.findElement(By.id("addsupp-btn"));
 		return Element;
 	}
+	public static WebElement btn_UpdateSupplier()
+	{
+		WebElement Element = driver.findElement(By.id("edit-supp-btn"));
+		return Element;
+	}
 }

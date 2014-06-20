@@ -17,5 +17,25 @@
     </classes>
   </test>
   
+  <!--
+  <test name="Add Dealer">
+    <classes>
+      <class name="com.wildriver.testcases.Admin.DealerMGR.DealerDetails.AddDealer"/>
+    </classes>
+  </test>
+  -->
+  
+  <test name="Add - Verify Supplier And Update - Verify Supplier">
+    <classes>
+      <class name="com.wildriver.testcases.Admin.PurchaseOrderMGR.SupplierMGR.SupplierDetails.AddSupplierAndVerify"/>
+      <!--<class name="com.wildriver.testcases.Admin.PurchaseOrderMGR.SupplierMGR.SupplierDetails.UpdateSupplierAndVerify"/>-->
+    </classes>
+  </test>
+  
+  <test name="Add Product">
+    <classes>
+       <class name="com.wildriver.testcases.Admin.StockMGR.ProductEditor.AddProduct"/>
+    </classes>
+  </test>
   
 </suite> <!-- Suite -->
