@@ -9,7 +9,7 @@ public class LoginPage extends SuperTestNG
 {
 	public static WebElement txtbx_Email()
 	{
-		WebElement Element = driver.findElement(By.id("UserEmail"));
+		WebElement Element = driver.findElement(By.id("username"));
 		return Element;
 	}
 	public static WebElement txtbx_Password()

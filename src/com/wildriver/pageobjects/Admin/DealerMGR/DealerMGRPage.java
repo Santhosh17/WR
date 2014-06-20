@@ -37,4 +37,9 @@ public class DealerMGRPage extends SuperTestNG
 		WebElement Element = driver.findElement(By.id("flashMessage"));
 		return Element;
 	}
+	public static WebElement lnk_PreviousRecord(String PreviousRecord)
+	{
+		WebElement Element = driver.findElement(By.xpath("//tr/td[text()='"+PreviousRecord+"']"));
+		return Element;
+	}
 }

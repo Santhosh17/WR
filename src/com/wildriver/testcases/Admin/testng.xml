@@ -8,7 +8,7 @@
       <class name="com.wildriver.testcases.Admin.AdminMGR.DeleteAddedUser"/>
     </classes>
   </test>
-  
+
   <test name="Add New User - Update Added User and Delete Updated User">
     <classes>
       <class name="com.wildriver.testcases.Admin.AdminMGR.AddUser"/>
@@ -16,16 +16,15 @@
       <class name="com.wildriver.testcases.Admin.AdminMGR.DeleteUpdatedUser"/>
     </classes>
   </test>
-  
-  <!--
-  <test name="Add Dealer">
+
+  <test name="Add Update Dealer and verify its data ">
     <classes>
-      <class name="com.wildriver.testcases.Admin.DealerMGR.DealerDetails.AddDealer"/>
+      <class name="com.wildriver.testcases.Admin.DealerMGR.DealerDetails.AddDealerAndVerify"/>
+      <class name="com.wildriver.testcases.Admin.DealerMGR.DealerDetails.UpdateDealerAndVerify"/>
     </classes>
   </test>
-  -->
-  
-  <test name="Add - Verify Supplier And Update - Verify Supplier">
+
+  <test name="Add - Verify And Update - Verify Supplier">
     <classes>
       <class name="com.wildriver.testcases.Admin.PurchaseOrderMGR.SupplierMGR.SupplierDetails.AddSupplierAndVerify"/>
       <!--<class name="com.wildriver.testcases.Admin.PurchaseOrderMGR.SupplierMGR.SupplierDetails.UpdateSupplierAndVerify"/>-->
@@ -34,8 +33,8 @@
   
   <test name="Add Product">
     <classes>
-       <class name="com.wildriver.testcases.Admin.StockMGR.ProductEditor.AddProduct"/>
+       <class name="com.wildriver.testcases.Admin.StockMGR.ProductEditor.AddProductAndVerify"/>
     </classes>
   </test>
-  
-</suite> <!-- Suite -->
+
+</suite> 

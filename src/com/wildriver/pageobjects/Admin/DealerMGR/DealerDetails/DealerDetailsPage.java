@@ -19,22 +19,22 @@ public class DealerDetailsPage extends SuperTestNG
 	}
 	public static WebElement txtbx_PostalAddress()
 	{
-		WebElement Element = driver.findElement(By.id("res_address"));
+		WebElement Element = driver.findElement(By.id("UserDetailsPostalAddress"));
 		return Element;
 	}
 	public static WebElement txtbx_City()
 	{
-		WebElement Element = driver.findElement(By.id("res_city"));
+		WebElement Element = driver.findElement(By.id("UserDetailsPostalCity"));
 		return Element;
 	}
 	public static WebElement txtbx_State()
 	{
-		WebElement Element = driver.findElement(By.id("res_state"));
+		WebElement Element = driver.findElement(By.id("UserDetailsPostalState"));
 		return Element;
 	}
 	public static WebElement txtbx_PostCode()
 	{
-		WebElement Element = driver.findElement(By.id("res_pcode"));
+		WebElement Element = driver.findElement(By.id("UserDetailsPostalCode"));
 		return Element;
 	}
 	public static WebElement chkbx_AddressCopyFromPostaltoDelivery()
@@ -44,22 +44,22 @@ public class DealerDetailsPage extends SuperTestNG
 	}
 	public static WebElement txtbx_DeliveryAddress()
 	{
-		WebElement Element = driver.findElement(By.id("res_shipAddr"));
+		WebElement Element = driver.findElement(By.id("UserDetailsDeliveryAddress"));
 		return Element;
 	}
 	public static WebElement txtbx_DeliveryCity()
 	{
-		WebElement Element = driver.findElement(By.id("res_ship_city"));
+		WebElement Element = driver.findElement(By.id("UserDetailsDeliveryCity"));
 		return Element;
 	}
 	public static WebElement txtbx_DeliveryState()
 	{
-		WebElement Element = driver.findElement(By.id("res_ship_state"));
+		WebElement Element = driver.findElement(By.id("UserDetailsDeliveryState"));
 		return Element;
 	}
 	public static WebElement txtbx_DeliveryPostCode()
 	{
-		WebElement Element = driver.findElement(By.id("res_ship_pcode"));
+		WebElement Element = driver.findElement(By.id("UserDetailsDeliveryPostalCode"));
 		return Element;
 	}
 	public static WebElement txtbx_Phone()
