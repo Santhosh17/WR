@@ -2,6 +2,7 @@ package com.wildriver.testcases.Admin.AdminMGR;
 
 import org.openqa.selenium.NoSuchElementException;
 import org.testng.Reporter;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.wildriver.libraries.Generic;
@@ -14,7 +15,8 @@ import com.wildriver.testcases.Admin.LoginPage.AdminLogin;
 public class AddUser extends SuperTestNG
 {
 	@Test(groups="Admin")
-	public static void WR_AddUser()
+	@Parameters ("RunningFor")
+	public static void WR_AddUser(String RunningFor)
 	{
 		try
 		{

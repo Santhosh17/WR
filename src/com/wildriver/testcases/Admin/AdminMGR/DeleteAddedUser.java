@@ -12,10 +12,10 @@ import com.wildriver.pageobjects.Admin.AdminMGR.AdminMGRPage;
 import com.wildriver.pageobjects.Admin.GeneralElements.AdminGeneralElements;
 import com.wildriver.testcases.Admin.LoginPage.AdminLogin;
 
-public class DeleteUser extends SuperTestNG
+public class DeleteAddedUser extends SuperTestNG
 {
 	@Test(groups="Admin")
-	public static void WR_DeleteUser()
+	public static void WR_DeleteAddedUser()
 	{
 		try
 		{

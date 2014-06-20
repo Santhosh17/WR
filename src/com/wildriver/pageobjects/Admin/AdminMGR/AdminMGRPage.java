@@ -92,4 +92,14 @@ public class AdminMGRPage extends SuperTestNG
 		WebElement Element = driver.findElement(By.id("flashMessage"));
 		return Element;
 	}
+	public static WebElement txtbx_PasswordDuringUpdate()
+	{
+		WebElement Element = driver.findElement(By.id("edit-password"));
+		return Element;
+	}
+	public static WebElement txtbx_PasswordAgainDuringUpdate()
+	{
+		WebElement Element = driver.findElement(By.id("edit-passwordagain"));
+		return Element;
+	}
 }

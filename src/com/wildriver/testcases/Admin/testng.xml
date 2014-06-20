@@ -2,12 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="none">
   <test name="Test">
+  <parameter name="RunningFor" value="Adding User"/> 
+  <parameter name="RunningFor" value="Updated User"/> 
     <classes>
       <class name="com.wildriver.testcases.Admin.AdminMGR.AddUser"/>
-      <class name="com.wildriver.testcases.Admin.AdminMGR.DeleteUser"/>
-      <class name="com.wildriver.testcases.Admin.PurchaseOrderMGR.SupplierMGR.SupplierDetails.AddSupplier"/>
-      <class name="com.wildriver.testcases.Admin.DealerMGR.DealerDetails.AddDealer"/>
-      <class name="com.wildriver.testcases.Admin.StockMGR.ProductEditor.AddProduct"/>
+      <class name="com.wildriver.testcases.Admin.AdminMGR.DeleteAddedUser"/>
+      <class name="com.wildriver.testcases.Admin.AdminMGR.AddUser"/>
+      <class name="com.wildriver.testcases.Admin.AdminMGR.UpdateUser"/>
+      <class name="com.wildriver.testcases.Admin.AdminMGR.DeleteUpdatedUser"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
