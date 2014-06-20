@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="none">
-  <test name="Test">
-  <parameter name="RunningFor" value="Adding User"/> 
-  <parameter name="RunningFor" value="Updated User"/> 
+
+  <test name="Add New User and Delete Created User">
     <classes>
       <class name="com.wildriver.testcases.Admin.AdminMGR.AddUser"/>
       <class name="com.wildriver.testcases.Admin.AdminMGR.DeleteAddedUser"/>
+    </classes>
+  </test>
+  
+  <test name="Add New User - Update Added User and Delete Updated User">
+    <classes>
       <class name="com.wildriver.testcases.Admin.AdminMGR.AddUser"/>
       <class name="com.wildriver.testcases.Admin.AdminMGR.UpdateUser"/>
       <class name="com.wildriver.testcases.Admin.AdminMGR.DeleteUpdatedUser"/>
     </classes>
-  </test> <!-- Test -->
+  </test>
+  
+  
 </suite> <!-- Suite -->
